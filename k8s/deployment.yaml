@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: your-docker-username/test-jenkins-pipeline:latest
+          image: rohansharmarobomq/test-jenkins-pipeline:latest
           ports:
             - containerPort: 80
