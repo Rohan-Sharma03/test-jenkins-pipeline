@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-jenkins-pipeline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-jenkins-pipeline
+  template:
+    metadata:
+      labels:
+        app: test-jenkins-pipeline
+    spec:
+      containers:
+        - name: nginx-container
+          image: your-docker-username/test-jenkins-pipeline:latest
+          ports:
+            - containerPort: 80
